@@ -8,7 +8,6 @@ function hashPassword(password) {
 }
 class Account {
   constructor(account) {
-    this.id = account.id;
     this.username = account.username;
     this.password = account.password;
   }
@@ -17,8 +16,17 @@ class Account {
 Account.create = async (newAcc, result) => {
   try{
       console.log(newAcc)
+      newAcc.password = await hashPassword(newAcc.password)
+      db.query("INSERT INTO login SET ?",newAcc,(err,res)=>{
+        if (err){
+          return result('Insert data fail !', null);
+        }else{
+          console.log("Successful create : ",newAcc)
+          return result(null,newAcc);
+        }
+      })
     }catch(error) {
-
+      return result('Insert data fail !', null);
     }
 };
 
