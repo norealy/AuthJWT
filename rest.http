@@ -1,0 +1,38 @@
+POST http://localhost:4321/api/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "username":"username110",
+  "password":"password110"
+}
+
+###
+POST http://localhost:4321/api/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+  "username":"username10",
+  "password":"password10"
+}
+
+# {
+  # "username":"admin_Xdatgd",
+  # "password":"PassWord_AD"
+# }
+# 
+
+###
+GET http://localhost:4321/api/users HTTP/1.1
+Content-Type: application/json
+Connection: keep-alive
+Access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJoZWxsb215ZnIxM2VuZCIsImV4cCI6MTYwODE1MzMzNywiYWxnIjoiSFMyNTYiLCJ0eXAiOiJKV1QiLCJpYXQiOjE2MDgxNDk3Mzd9.td6iUZRqELsuqycbqxuSc_Q8ogAE1nK9eOS84jdXjqY
+
+
+
+
+###
+GET  http://localhost:4321/api/posts HTTP/1.1
+Content-Type: application/json
+Access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJoZWxsb215ZnIxM2VuZCIsImV4cCI6MTYwODE1MzEwMiwiYWxnIjoiSFMyNTYiLCJ0eXAiOiJKV1QiLCJpYXQiOjE2MDgxNDk1MDJ9.czvXQeVL0eiquXVqzkU9lWicTOXl8wfA-FRRP0iiPts
+
+
