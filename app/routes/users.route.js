@@ -8,4 +8,3 @@ router.get('/',verifyToken,(req,res)=>{
 });
 
 module.exports = router;
-

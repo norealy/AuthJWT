@@ -8,7 +8,7 @@ exports.findAllUsers = (req, res) => {
 				message: err || 'Permission denis !!!',
 			});
 		} else {
-            console.table(data)
+            // console.table(data)
             return res.status(200).send({"Show all users ":data});
 		}
 	});
